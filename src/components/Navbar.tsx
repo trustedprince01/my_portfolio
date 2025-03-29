@@ -1,19 +1,28 @@
 
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full backdrop-blur-sm bg-background/80 border-b">
+    <motion.nav 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/10"
+    >
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="text-xl font-bold">Portfolio</Link>
-        <div className="flex space-x-6">
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-          <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+        <Link to="/" className="text-xl font-bold text-white">P</Link>
+        <div className="flex space-x-8">
+          <a href="#about" className="text-gray-300 hover:text-white transition-colors">ABOUT</a>
+          <a href="#projects" className="text-gray-300 hover:text-white transition-colors">PROJECTS</a>
+          <a href="#resume" className="text-gray-300 hover:text-white transition-colors">RESUME</a>
         </div>
+        <Button size="sm" asChild className="bg-white text-black hover:bg-white/90 rounded-full">
+          <a href="#contact">CONTACT ME</a>
+        </Button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
