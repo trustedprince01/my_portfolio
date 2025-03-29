@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const frontendSkills = [
   { name: "React", level: 90 },
