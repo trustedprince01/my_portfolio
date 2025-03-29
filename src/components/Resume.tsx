@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Briefcase, GraduationCap, Code } from "lucide-react";
 
 const Resume = () => {
   return (
@@ -20,9 +20,9 @@ const Resume = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">RESUME</h2>
+          <h2 className="text-3xl font-bold mb-4">EXPERIENCE</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            My education, work experience, skills, and qualifications
+            My education, work experience, and technical skills
           </p>
         </motion.div>
         
@@ -48,36 +48,63 @@ const Resume = () => {
             </div>
             
             <div className="mb-8">
-              <h4 className="text-lg font-bold border-b border-white/20 pb-2 mb-4">CAREER GOAL STATEMENT</h4>
-              <p className="text-sm text-blue-100">
-                Aspiring Web3 & Software Developer with a passion for backend development and 
-                blockchain technology. Currently building my skills in smart contracts, web development, 
-                and API design, aiming to merge traditional backend expertise with emerging Web3 innovations.
-              </p>
-            </div>
-            
-            <div className="mb-8">
-              <h4 className="text-lg font-bold border-b border-white/20 pb-2 mb-4">SKILLS</h4>
+              <h4 className="text-lg font-bold border-b border-white/20 pb-2 mb-4">CORE SKILLS</h4>
               <div className="text-sm space-y-2 text-blue-100">
-                <p>UI/UX Design (Figma)</p>
-                <p>Tools & Platforms</p>
-                <p>Git/GitHub, Postman, Linux Terminal</p>
-                <p>Desktop Publishing (MS Word, PowerPoint)</p>
+                <div className="flex justify-between items-center">
+                  <span>UI/UX Design</span>
+                  <div className="w-1/2 bg-blue-800/30 h-2 rounded-full">
+                    <div className="bg-blue-400 h-2 rounded-full w-4/5"></div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>HTML/CSS</span>
+                  <div className="w-1/2 bg-blue-800/30 h-2 rounded-full">
+                    <div className="bg-blue-400 h-2 rounded-full w-5/6"></div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>JavaScript</span>
+                  <div className="w-1/2 bg-blue-800/30 h-2 rounded-full">
+                    <div className="bg-blue-400 h-2 rounded-full w-3/4"></div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Python</span>
+                  <div className="w-1/2 bg-blue-800/30 h-2 rounded-full">
+                    <div className="bg-blue-400 h-2 rounded-full w-4/6"></div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Tools & Git</span>
+                  <div className="w-1/2 bg-blue-800/30 h-2 rounded-full">
+                    <div className="bg-blue-400 h-2 rounded-full w-5/6"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="mb-8">
-              <h4 className="text-lg font-bold border-b border-white/20 pb-2 mb-4">HOBBIES & INTERESTS</h4>
-              <ul className="text-sm space-y-2 text-blue-100 list-disc pl-5">
-                <li>Surfing the internet & researching new tech</li>
-                <li>Solving algorithmic challenges & coding puzzles</li>
-                <li>Watching documentaries & historical content</li>
-              </ul>
-            </div>
-            
+
             <div>
-              <h4 className="text-lg font-bold border-b border-white/20 pb-2 mb-4">REFERENCES</h4>
-              <p className="text-sm text-blue-100">Available upon request.</p>
+              <h4 className="text-lg font-bold border-b border-white/20 pb-2 mb-4">CONTACT INFO</h4>
+              <div className="text-sm space-y-2 text-blue-100">
+                <p className="flex items-center">
+                  <span className="mr-2">📧</span>
+                  chibuzorprince68@gmail.com
+                </p>
+                <p className="flex items-center">
+                  <span className="mr-2">📱</span>
+                  +2347048255509
+                </p>
+                <p className="flex items-center">
+                  <span className="mr-2">📍</span>
+                  Lagos, Nigeria
+                </p>
+                <p className="flex items-center">
+                  <span className="mr-2">🔗</span>
+                  <a href="https://github.com/trustedprince01" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">
+                    github.com/trustedprince01
+                  </a>
+                </p>
+              </div>
             </div>
           </motion.div>
           
@@ -100,33 +127,12 @@ const Resume = () => {
               </Button>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div className="flex gap-2 items-center">
-                <span className="text-blue-300">📧</span>
-                <span>chibuzorprince68@gmail.com</span>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span className="text-blue-300">📱</span>
-                <span>+2347048255509</span>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span className="text-blue-300">📍</span>
-                <span>Lagos, Nigeria</span>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span className="text-blue-300">🔗</span>
-                <a href="https://github.com/trustedprince01" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">
-                  github.com/trustedprince01
-                </a>
-              </div>
-            </div>
-            
             <div className="border-t border-white/10 pt-6 mt-6">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-4">
-                  <span className="text-white text-xl">🎓</span>
+                  <GraduationCap className="text-white h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-bold">COURSES</h3>
+                <h3 className="text-xl font-bold">EDUCATION</h3>
               </div>
               
               <div className="relative pl-8 pb-6 border-l border-blue-800/50 ml-5">
@@ -151,7 +157,7 @@ const Resume = () => {
             <div className="border-t border-white/10 pt-6 mt-6">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-4">
-                  <span className="text-white text-xl">💼</span>
+                  <Briefcase className="text-white h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-bold">EXPERIENCE</h3>
               </div>
@@ -168,7 +174,6 @@ const Resume = () => {
                       <li>Designed wireframes & prototypes using Figma.</li>
                       <li>Built web interfaces with HTML, CSS, and JavaScript.</li>
                       <li>Developed backend systems using Python, Django, and MySQL.</li>
-                      <li>Created full-stack projects like a Food Ordering Website, City Guide App, and Expense Tracker API.</li>
                       <li>Currently learning Web3 development, focusing on smart contracts and blockchain integration.</li>
                     </ul>
                   </div>
@@ -179,49 +184,46 @@ const Resume = () => {
             <div className="border-t border-white/10 pt-6 mt-6">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-4">
-                  <span className="text-white text-xl">🚀</span>
+                  <Code className="text-white h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-bold">NOTABLE PROJECTS</h3>
               </div>
               
               <div className="relative pl-8 pb-6 border-l border-blue-800/50 ml-5">
-                <div className="mb-6">
+                <div className="mb-4">
                   <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
-                  <div>
-                    <h4 className="font-bold">E-Commerce Website for Eyewear (HTML, CSS, JavaScript & MySQL)</h4>
-                    <p className="text-sm text-gray-300 mt-1">
-                      Built an online store with user authentication, shopping cart & payment integration
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
-                  <div>
-                    <h4 className="font-bold">City Guide App (Flutter & Firebase)</h4>
-                    <p className="text-sm text-gray-300 mt-1">
-                      Developed a mobile app with Google Maps API & Firebase for location-based services
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
-                  <div>
-                    <h4 className="font-bold">Food Ordering Website (Django & MySQL)</h4>
-                    <p className="text-sm text-gray-300 mt-1">
-                      Created a food ordering system with user authentication & order management
-                    </p>
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
-                  <div>
-                    <h4 className="font-bold">Expense Tracker API (Django REST Framework)</h4>
-                    <p className="text-sm text-gray-300 mt-1">
-                      Designed a secure API for tracking expenses with JWT authentication & CRUD operations
-                    </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-blue-900/30 p-4 rounded-lg">
+                      <h4 className="font-bold">E-Commerce Website</h4>
+                      <p className="text-xs text-blue-300">HTML, CSS, JavaScript & MySQL</p>
+                      <p className="text-sm text-gray-300 mt-1">
+                        Online store with user authentication, shopping cart & payment integration
+                      </p>
+                    </div>
+                    
+                    <div className="bg-blue-900/30 p-4 rounded-lg">
+                      <h4 className="font-bold">City Guide App</h4>
+                      <p className="text-xs text-blue-300">Flutter & Firebase</p>
+                      <p className="text-sm text-gray-300 mt-1">
+                        Mobile app with Google Maps API & location-based services
+                      </p>
+                    </div>
+                    
+                    <div className="bg-blue-900/30 p-4 rounded-lg">
+                      <h4 className="font-bold">Food Ordering Website</h4>
+                      <p className="text-xs text-blue-300">Django & MySQL</p>
+                      <p className="text-sm text-gray-300 mt-1">
+                        Food ordering system with user authentication & order management
+                      </p>
+                    </div>
+                    
+                    <div className="bg-blue-900/30 p-4 rounded-lg">
+                      <h4 className="font-bold">Expense Tracker API</h4>
+                      <p className="text-xs text-blue-300">Django REST Framework</p>
+                      <p className="text-sm text-gray-300 mt-1">
+                        Secure API with JWT authentication & CRUD operations
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

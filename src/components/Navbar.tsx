@@ -17,7 +17,7 @@ const Navbar = () => {
           <a href="#about" className="text-gray-300 hover:text-white transition-colors">ABOUT</a>
           <a href="#projects" className="text-gray-300 hover:text-white transition-colors">PROJECTS</a>
           <a href="#skills" className="text-gray-300 hover:text-white transition-colors">SKILLS</a>
-          <a href="#resume" className="text-gray-300 hover:text-white transition-colors">RESUME</a>
+          <a href="#resume" className="text-gray-300 hover:text-white transition-colors">EXPERIENCE</a>
         </div>
         <Button size="sm" asChild className="bg-white text-black hover:bg-white/90 rounded-full">
           <a href="#contact">CONTACT ME</a>
