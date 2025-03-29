@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, Briefcase, GraduationCap, Code } from "lucide-react";
@@ -22,7 +21,7 @@ const Resume = () => {
         >
           <h2 className="text-3xl font-bold mb-4">EXPERIENCE</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            My education, work experience, and technical skills
+            My education, work experience, and professional growth
           </p>
         </motion.div>
         
@@ -186,7 +185,7 @@ const Resume = () => {
                 <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-4">
                   <Code className="text-white h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-bold">NOTABLE PROJECTS</h3>
+                <h3 className="text-xl font-bold">KEY PROJECT HIGHLIGHTS</h3>
               </div>
               
               <div className="relative pl-8 pb-6 border-l border-blue-800/50 ml-5">
@@ -197,7 +196,7 @@ const Resume = () => {
                       <h4 className="font-bold">E-Commerce Website</h4>
                       <p className="text-xs text-blue-300">HTML, CSS, JavaScript & MySQL</p>
                       <p className="text-sm text-gray-300 mt-1">
-                        Online store with user authentication, shopping cart & payment integration
+                        Created core shopping functionality with secure payment system
                       </p>
                     </div>
                     
@@ -205,25 +204,14 @@ const Resume = () => {
                       <h4 className="font-bold">City Guide App</h4>
                       <p className="text-xs text-blue-300">Flutter & Firebase</p>
                       <p className="text-sm text-gray-300 mt-1">
-                        Mobile app with Google Maps API & location-based services
+                        Implemented location services and user recommendations
                       </p>
                     </div>
-                    
-                    <div className="bg-blue-900/30 p-4 rounded-lg">
-                      <h4 className="font-bold">Food Ordering Website</h4>
-                      <p className="text-xs text-blue-300">Django & MySQL</p>
-                      <p className="text-sm text-gray-300 mt-1">
-                        Food ordering system with user authentication & order management
-                      </p>
-                    </div>
-                    
-                    <div className="bg-blue-900/30 p-4 rounded-lg">
-                      <h4 className="font-bold">Expense Tracker API</h4>
-                      <p className="text-xs text-blue-300">Django REST Framework</p>
-                      <p className="text-sm text-gray-300 mt-1">
-                        Secure API with JWT authentication & CRUD operations
-                      </p>
-                    </div>
+                  </div>
+                  <div className="mt-4 text-center">
+                    <a href="#projects" className="text-blue-400 hover:text-blue-300 text-sm inline-flex items-center">
+                      View full portfolio details <ArrowRight className="ml-1 h-3 w-3" />
+                    </a>
                   </div>
                 </div>
               </div>
