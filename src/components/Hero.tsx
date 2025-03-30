@@ -1,7 +1,8 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Code, Database, Globe, Server, Layers, Command } from "lucide-react";
 import { motion } from "framer-motion";
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 
 const Hero = () => {
   return (
@@ -66,6 +67,55 @@ const Hero = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Tech Stack Section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mt-24"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-left">Tech Stack</h2>
+            <TooltipProvider>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+                {techStack.map((tech, index) => (
+                  <Tooltip key={tech.name}>
+                    <TooltipTrigger asChild>
+                      <motion.div
+                        className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          duration: 0.5, 
+                          delay: 0.1 * index,
+                        }}
+                        whileHover={{ 
+                          scale: 1.05,
+                          transition: { duration: 0.2 }
+                        }}
+                        // Add floating animation
+                        animate={{
+                          y: [0, -8, 0],
+                          transition: {
+                            duration: 4,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            delay: index * 0.2
+                          }
+                        }}
+                      >
+                        <tech.icon className={`h-10 w-10 ${tech.color}`} />
+                        <span className="mt-3 text-sm text-gray-300">{tech.name}</span>
+                      </motion.div>
+                    </TooltipTrigger>
+                    <TooltipContent className="bg-gray-900 border border-gray-700 text-white">
+                      <p>{tech.description}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                ))}
+              </div>
+            </TooltipProvider>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -97,7 +147,57 @@ const services = [
     iconColors: ["text-blue-400", "text-red-400", "text-green-400"],
     description: "Building complete web applications from front-end interfaces to back-end systems and databases."
   }
-  
+];
+
+const techStack = [
+  {
+    name: "React",
+    icon: Code,
+    color: "text-blue-400",
+    description: "Building interactive UIs with React"
+  },
+  {
+    name: "Node.js",
+    icon: Server,
+    color: "text-green-400",
+    description: "Server-side JavaScript runtime"
+  },
+  {
+    name: "TypeScript",
+    icon: Command,
+    color: "text-blue-500",
+    description: "Strongly typed programming language"
+  },
+  {
+    name: "MongoDB",
+    icon: Database,
+    color: "text-green-500",
+    description: "NoSQL database for modern applications"
+  },
+  {
+    name: "Tailwind CSS",
+    icon: Layers,
+    color: "text-cyan-400",
+    description: "Utility-first CSS framework"
+  },
+  {
+    name: "Ethereum",
+    icon: Globe,
+    color: "text-purple-400",
+    description: "Smart contract development"
+  },
+  {
+    name: "Solidity",
+    icon: Code,
+    color: "text-yellow-500",
+    description: "Smart contract programming language"
+  },
+  {
+    name: "Web3.js",
+    icon: Globe,
+    color: "text-orange-400",
+    description: "Ethereum JavaScript API"
+  }
 ];
 
 export default Hero;
