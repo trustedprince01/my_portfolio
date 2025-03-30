@@ -35,9 +35,9 @@ const About = () => {
             className="overflow-hidden rounded-lg"
           >
             <img 
-              src="/images/me.jpg" 
+              src="/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png" 
               alt="Profile" 
-              className="w-full aspect-square object-cover object-top"
+              className="w-full aspect-square object-cover"
             />
           </motion.div>
           

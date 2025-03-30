@@ -47,50 +47,31 @@ const Resume = () => {
             </div>
 
             <div className="border-t border-white/10 pt-6 mt-6">
-  <div className="flex items-center mb-4">
-    <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-4">
-      <GraduationCap className="text-white h-5 w-5" />
-    </div>
-    <h3 className="text-xl font-bold">EDUCATION</h3>
-  </div>
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-4">
+                  <GraduationCap className="text-white h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-bold">EDUCATION</h3>
+              </div>
 
-  <div className="relative pl-8 pb-6 border-l border-blue-800/50 ml-5">
-    {/* First Course */}
-    <div className="mb-4">
-      <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
-      <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
-        <span className="text-blue-300 font-semibold">2023-2024</span>
-        <div>
-          <h4 className="font-bold">Software Engineering</h4>
-          <p className="text-blue-300">Aptech Computer Education</p>
-          <ul className="list-disc pl-5 mt-2 text-sm text-gray-300">
-            <li>Figma UI/UX Design</li>
-            <li>HTML, CSS, and JavaScript Fundamentals</li>
-            <li>Python Basics & Backend Development</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    {/* New Course */}
-    <div className="mb-4">
-      <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
-      <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
-        <span className="text-blue-300 font-semibold">2024-2025</span>
-        <div>
-          <h4 className="font-bold">[New Course Name]</h4>
-          <p className="text-blue-300">Cyfrin Updraft</p>
-          <ul className="list-disc pl-5 mt-2 text-sm text-gray-300">
-            <li>[Key topic 1]</li>
-            <li>[Key topic 2]</li>
-            <li>[Key topic 3]</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+              <div className="relative pl-8 pb-6 border-l border-blue-800/50 ml-5">
+                <div className="mb-4">
+                  <div className="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 mt-1"></div>
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
+                    <span className="text-blue-300 font-semibold">2023-2024</span>
+                    <div>
+                      <h4 className="font-bold">Software Engineering</h4>
+                      <p className="text-blue-300">Aptech Computer Education</p>
+                      <ul className="list-disc pl-5 mt-2 text-sm text-gray-300">
+                        <li>Figma UI/UX Design</li>
+                        <li>HTML, CSS and JavaScript Fundamentals</li>
+                        <li>Python Basics & Backend Development</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="border-t border-white/10 pt-6 mt-6">
               <div className="flex items-center mb-4">

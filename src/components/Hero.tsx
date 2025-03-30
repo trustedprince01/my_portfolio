@@ -4,8 +4,6 @@ import { ArrowRight, Download, Code, Database, Globe, Server, Layers, Command } 
 import { motion } from "framer-motion";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 
-import { Typewriter } from 'react-simple-typewriter';
-
 const Hero = () => {
   return (
     <section className="min-h-screen py-20 md:py-28 relative overflow-hidden bg-black text-white">
@@ -30,26 +28,8 @@ const Hero = () => {
             className="text-left"
           >
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
-  Hey, I'm <span className="text-gray-400">Prince</span> <span className="text-yellow-400">👋</span>
-  <br />
-  <span className="text-blue-400">
-    <Typewriter
-      words={[
-        "I'm a Software Developer",
-        "I'm a Blockchain Enthusiast",
-        "I'm a Smart Contract Auditor",
-        "I build Web3 Applications",
-        "I love Open Source"
-      ]}
-      loop={true}
-      cursor
-      cursorStyle="_"
-      typeSpeed={50}
-      deleteSpeed={30}
-      delaySpeed={1000}
-    />
-  </span>
-</h1>
+              Hey, I'm <span className="text-gray-400">Prince</span> <span className="text-yellow-400">👋</span>
+            </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
               Hello there! I'm a passionate web developer focused on creating clean, intuitive web designs. I love bringing ideas to life with elegant and effective solutions, crafting user experiences that inspire and delight.
             </p>
@@ -87,6 +67,7 @@ const Hero = () => {
               </motion.div>
             ))}
           </div>
+
           {/* Tech Stack Section */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -128,42 +109,6 @@ const Hero = () => {
               </div>
             </TooltipProvider>
           </motion.div>
-{/* Testimonial Section */}
-<motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.8, delay: 0.5 }}
-  className="mt-24"
->
-  <h2 className="text-3xl font-bold mb-8 text-left">Testimonials</h2>
-  
-  <div className="relative overflow-x-auto scrollbar-hide flex gap-6 snap-x snap-mandatory px-2 sm:px-0">
-    {testimonials.map((testimonial, index) => (
-      <div 
-        key={index} 
-        className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg min-w-[300px] sm:min-w-[350px] snap-center"
-      >
-        <div className="flex items-center gap-4 mb-4">
-          <img 
-            src={testimonial.avatar} 
-            alt={testimonial.name} 
-            className="w-12 h-12 rounded-full border border-white/20"
-          />
-          <div>
-            <h4 className="text-lg font-semibold">{testimonial.name}</h4>
-            <p className="text-sm text-gray-400">{testimonial.role}</p>
-          </div>
-        </div>
-        <p className="text-gray-300 italic">"{testimonial.review}"</p>
-        <div className="flex mt-3">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <span key={i} className={`text-yellow-400 ${i < testimonial.rating ? "opacity-100" : "opacity-50"}`}>⭐</span>
-          ))}
-        </div>
-      </div>
-    ))}
-  </div>
-</motion.div>
         </div>
       </div>
     </section>
@@ -229,11 +174,11 @@ const techStack = [
     description: "Utility-first CSS framework"
   },
   {
-    name: "Python",
-    icon: () => <img src="/images/python.svg" alt="Python Logo" className="h-10 w-10" />, 
-    color: "text-blue-400",
-    description: "Backend & AI development"
-},
+    name: "Ethereum",
+    icon: Globe,
+    color: "text-purple-400",
+    description: "Smart contract development"
+  },
   {
     name: "Solidity",
     icon: Code,
@@ -241,36 +186,11 @@ const techStack = [
     description: "Smart contract programming language"
   },
   {
-    name: "Flutter",
-    icon: () => <img src="/images/flutter.svg" alt="Python Logo" className="h-10 w-10" />, 
+    name: "Web3.js",
+    icon: Globe,
     color: "text-orange-400",
     description: "Ethereum JavaScript API"
   }
 ];
-
-const testimonials = [
-  {
-    name: "John Doe",
-    role: "Product Designer",
-    review: "Prince is an exceptional developer! His attention to detail and creative approach made our project a success.",
-    rating: 5,
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    name: "Jane Smith",
-    role: "Startup Founder",
-    review: "Working with Prince was a game changer! His web development skills are top-notch.",
-    rating: 5,
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
-  {
-    name: "Michael Brown",
-    role: "Blockchain Engineer",
-    review: "Prince's understanding of smart contracts and Web3 is truly impressive. Highly recommend him!",
-    rating: 5,
-    avatar: "https://randomuser.me/api/portraits/men/76.jpg"
-  }
-];
-
 
 export default Hero;
