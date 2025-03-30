@@ -84,18 +84,9 @@ const Hero = () => {
                       <motion.div
                         className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 cursor-pointer"
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ 
-                          duration: 0.5, 
-                          delay: 0.1 * index,
-                        }}
-                        whileHover={{ 
-                          scale: 1.05,
-                          transition: { duration: 0.2 }
-                        }}
-                        // Add floating animation
                         animate={{
-                          y: [0, -8, 0],
+                          opacity: 1, 
+                          y: [0, -8, 0], // Floating animation
                           transition: {
                             duration: 4,
                             repeat: Infinity,
@@ -103,6 +94,8 @@ const Hero = () => {
                             delay: index * 0.2
                           }
                         }}
+                        transition={{ duration: 0.5, delay: 0.1 * index }}
+                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                       >
                         <tech.icon className={`h-10 w-10 ${tech.color}`} />
                         <span className="mt-3 text-sm text-gray-300">{tech.name}</span>
