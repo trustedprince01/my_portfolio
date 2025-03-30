@@ -47,7 +47,7 @@ const Hero = () => {
             </div>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-20">
             {services.map((service, index) => (
               <motion.div 
                 key={service.title}
@@ -90,7 +90,14 @@ const services = [
     icons: [ArrowRight, ArrowRight, ArrowRight],
     iconColors: ["text-blue-400", "text-red-400", "text-green-400"],
     description: "Building complete web applications from front-end interfaces to back-end systems and databases."
+  },
+  {
+    title: "Full-stack Development",
+    icons: [ArrowRight, ArrowRight, ArrowRight],
+    iconColors: ["text-blue-400", "text-red-400", "text-green-400"],
+    description: "Building complete web applications from front-end interfaces to back-end systems and databases."
   }
+  
 ];
 
 export default Hero;
