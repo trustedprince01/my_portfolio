@@ -1,7 +1,7 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, Briefcase, GraduationCap, Code } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+import { Download, Briefcase, GraduationCap, Code, ArrowRight } from "lucide-react";
 
 const Resume = () => {
   return (
