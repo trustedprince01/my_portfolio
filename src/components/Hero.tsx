@@ -271,7 +271,7 @@ const techStack = [
   },
   {
     name: "MongoDB",
-    icon: Database,
+    icon: () => <img src="/images/mongodb.svg" alt="mongodb" className="h-10 w-10" />,
     color: "text-green-500",
     description: "NoSQL database for modern applications"
   },
