@@ -15,7 +15,7 @@ const About = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="overflow-hidden rounded-lg max-w-[350px] mx-auto md:max-w-none"
+            className="overflow-hidden rounded-lg max-w-[350px] mx-auto md:mx-0 md:max-w-none md:ml-auto md:mr-0"
           >
             <img 
               src="/images/me.jpg" 

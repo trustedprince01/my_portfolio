@@ -55,12 +55,14 @@ const Index = () => {
       <div className="fixed inset-0 opacity-30 z-[-1] bg-grid" />
       
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Resume />
-      <Contact />
+      <main className="relative">
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Resume />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
