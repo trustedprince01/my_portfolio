@@ -29,10 +29,10 @@ const otherSkills = [
 const SkillBar = ({ name, level }: { name: string; level: number }) => (
   <div className="mb-4">
     <div className="flex justify-between mb-1">
-      <span className="text-gray-300 text-sm sm:text-base">{name}</span>
-      <span className="text-gray-400 text-sm sm:text-base">{level}%</span>
+      <span className="text-gray-300">{name}</span>
+      <span className="text-gray-400">{level}%</span>
     </div>
-    <div className="h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
+    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
       <motion.div
         initial={{ width: 0 }}
         whileInView={{ width: `${level}%` }}
@@ -48,7 +48,7 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("frontend");
   
   return (
-    <section id="skills" className="py-16 md:py-20 bg-black text-white relative overflow-hidden">
+    <section id="skills" className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 right-20 w-72 h-72 bg-purple-500/10 rounded-full filter blur-3xl"></div>
@@ -66,7 +66,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12"
+          className="text-3xl font-bold text-center mb-12"
         >
           SKILLS
         </motion.h2>
@@ -76,12 +76,12 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto p-4 sm:p-6 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+          className="max-w-3xl mx-auto p-6 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
         >
           <div className="flex mb-6 border-b border-white/10">
             <button
               onClick={() => setActiveTab("frontend")}
-              className={`flex-1 pb-3 text-center transition-colors text-sm sm:text-base ${
+              className={`flex-1 pb-3 text-center transition-colors ${
                 activeTab === "frontend" ? "text-white border-b-2 border-white" : "text-gray-400 hover:text-gray-300"
               }`}
             >
@@ -89,7 +89,7 @@ const Skills = () => {
             </button>
             <button
               onClick={() => setActiveTab("backend")}
-              className={`flex-1 pb-3 text-center transition-colors text-sm sm:text-base ${
+              className={`flex-1 pb-3 text-center transition-colors ${
                 activeTab === "backend" ? "text-white border-b-2 border-white" : "text-gray-400 hover:text-gray-300"
               }`}
             >
@@ -97,7 +97,7 @@ const Skills = () => {
             </button>
             <button
               onClick={() => setActiveTab("other")}
-              className={`flex-1 pb-3 text-center transition-colors text-sm sm:text-base ${
+              className={`flex-1 pb-3 text-center transition-colors ${
                 activeTab === "other" ? "text-white border-b-2 border-white" : "text-gray-400 hover:text-gray-300"
               }`}
             >

@@ -63,7 +63,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-16 md:py-20 bg-black text-white relative overflow-hidden">
+    <section id="projects" className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full filter blur-3xl"></div>
@@ -81,7 +81,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl font-bold text-center mb-4"
+          className="text-3xl font-bold text-center mb-4"
         >
           PORTFOLIO
         </motion.h2>
@@ -90,12 +90,12 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto mb-8"
+          className="text-gray-400 text-center max-w-2xl mx-auto mb-8"
         >
           Detailed showcase of my complete projects with live demos and source code
         </motion.p>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {projects.map((project, index) => (
             <motion.div 
               key={project.id}
@@ -112,9 +112,9 @@ const Projects = () => {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
-                <CardContent className="flex-grow flex flex-col p-4 sm:p-6 bg-black/80">
-                  <h3 className="text-base sm:text-lg font-semibold mb-2">{project.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-400 mb-4">{project.description}</p>
+                <CardContent className="flex-grow flex flex-col p-6 bg-black/80">
+                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <span key={tag} className="px-2 py-1 bg-white/5 text-gray-300 text-xs rounded-md">

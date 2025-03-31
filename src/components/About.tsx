@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-16 md:py-20 bg-black text-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-green-500/10 rounded-full filter blur-3xl"></div>
@@ -21,7 +21,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12"
+          className="text-3xl font-bold text-center mb-12"
         >
           ABOUT
         </motion.h2>
@@ -32,7 +32,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="overflow-hidden rounded-lg max-w-[350px] mx-auto md:max-w-none"
+            className="overflow-hidden rounded-lg"
           >
             <img 
               src="/images/me.jpg" 
@@ -46,15 +46,14 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center md:text-left"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-4">Who I Am</h3>
-            <p className="text-sm sm:text-base text-gray-400 mb-6">
+            <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
+            <p className="text-gray-400 mb-6">
               I'm a passionate front-end developer with expertise in React, TypeScript, and 
               modern UI frameworks. With a strong focus on creating intuitive and responsive 
               user interfaces, I strive to build applications that are both beautiful and functional.
             </p>
-            <p className="text-sm sm:text-base text-gray-400">
+            <p className="text-gray-400">
               When I'm not coding, you can find me exploring new technologies, contributing to 
               open-source projects, or enjoying outdoor activities to maintain a healthy work-life balance.
             </p>
