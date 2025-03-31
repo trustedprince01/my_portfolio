@@ -1,11 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Code, Database, Globe, Server, Layers, Command } from "lucide-react";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
-
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="min-h-screen py-20 md:py-28 relative overflow-hidden bg-black text-white">
       {/* Background effect */}
@@ -26,9 +29,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-left"
+            className="text-left pt-16 md:pt-0"
           >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4">
               Hey, I'm <span className="text-gray-400">Prince</span> <span className="text-yellow-400">👋</span>
               <br />
               <span className="text-blue-400">
@@ -48,7 +51,7 @@ const Hero = () => {
                 />
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
               Hello there! I'm a passionate web developer focused on creating clean, intuitive web designs. I love bringing ideas to life with elegant and effective solutions, crafting user experiences that inspire and delight.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -94,22 +97,27 @@ const Hero = () => {
           >
             <h2 className="text-3xl font-bold mb-8 text-left">Tech Stack</h2>
             <TooltipProvider>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-h-[400px] overflow-y-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 max-h-[400px] overflow-y-auto">
                 {techStack.map((tech, index) => (
                   <Tooltip key={tech.name}>
                     <TooltipTrigger asChild>
                       <motion.div
-                        className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                        initial={{ opacity: 0, y: 20 }}
+                        className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                        initial={{ opacity: 0 }}
                         animate={{
                           opacity: 1,
-                          y: [0, -8, 0], // Floating animation
+                          y: [0, -8, 0],
                         }}
-                        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", delay: index * 0.2 }}
-                        whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
+                        transition={{ 
+                          duration: 4, 
+                          repeat: Infinity, 
+                          repeatType: "reverse", 
+                          delay: index * 0.2 
+                        }}
+                        whileHover={{ scale: 1.05 }}
                       >
-                        <tech.icon className={`h-10 w-10 ${tech.color}`} />
-                        <span className="mt-3 text-sm text-gray-300">{tech.name}</span>
+                        <tech.icon className={`h-8 w-8 sm:h-10 sm:w-10 ${tech.color}`} />
+                        <span className="mt-2 text-xs sm:text-sm text-gray-300">{tech.name}</span>
                       </motion.div>
                     </TooltipTrigger>
                     <TooltipContent className="bg-gray-900 border border-gray-700 text-white">
@@ -129,27 +137,27 @@ const Hero = () => {
             className="mt-24"
           >
             <h2 className="text-3xl font-bold mb-8 text-left">Testimonials</h2>
-            <div className="relative overflow-x-auto scrollbar-hide flex gap-6 snap-x snap-mandatory px-2 sm:px-0">
+            <div className="relative overflow-x-auto scrollbar-hide flex gap-4 sm:gap-6 snap-x snap-mandatory px-2 sm:px-0">
               {testimonials.map((testimonial, index) => (
                 <div 
                   key={index} 
-                  className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg min-w-[300px] sm:min-w-[350px] snap-center"
+                  className="p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg min-w-[250px] sm:min-w-[300px] md:min-w-[350px] snap-center"
                 >
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                     <img 
                       src={testimonial.avatar} 
                       alt={testimonial.name} 
-                      className="w-12 h-12 rounded-full border border-white/20"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20"
                     />
                     <div>
-                      <h4 className="text-lg font-semibold">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-400">{testimonial.role}</p>
+                      <h4 className="text-base sm:text-lg font-semibold">{testimonial.name}</h4>
+                      <p className="text-xs sm:text-sm text-gray-400">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-300 italic">"{testimonial.review}"</p>
-                  <div className="flex mt-3">
+                  <p className="text-sm sm:text-base text-gray-300 italic">"{testimonial.review}"</p>
+                  <div className="flex mt-2 sm:mt-3">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <span key={i} className={`text-yellow-400 ${i < testimonial.rating ? "opacity-100" : "opacity-50"}`}>⭐</span>
+                      <span key={i} className={`text-xs sm:text-sm text-yellow-400 ${i < testimonial.rating ? "opacity-100" : "opacity-50"}`}>⭐</span>
                     ))}
                   </div>
                 </div>
