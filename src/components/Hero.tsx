@@ -250,7 +250,7 @@ const techStack = [
   },
   {
     name: "Node.js",
-    icon: Server,
+    icon: () => <img src="/images/nodejs.svg" alt="nodejs" className="h-10 w-10" />, 
     color: "text-green-400",
     description: "JavaScript runtime for backend development"
   },
@@ -264,7 +264,7 @@ const techStack = [
   // Database Management
   {
     name: "PostgreSQL",
-    icon: Database,
+    icon: () => <img src="/images/postgresql.svg" alt="postgresql" className="h-10 w-10" />,
     color: "text-green-500",
     description: "Relational database management system"
   },
