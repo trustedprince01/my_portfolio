@@ -37,7 +37,6 @@ const Hero = () => {
       words={[
         "I'm a Software Developer",
         "I'm a Blockchain Enthusiast",
-        "I'm a Smart Contract Auditor",
         "I build Web3 Applications",
         "I love Open Source"
       ]}
@@ -89,45 +88,46 @@ const Hero = () => {
           </div>
           {/* Tech Stack Section */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-24"
-          >
-            <h2 className="text-3xl font-bold mb-8 text-left">Tech Stack</h2>
-            <TooltipProvider>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-                {techStack.map((tech, index) => (
-                  <Tooltip key={tech.name}>
-                    <TooltipTrigger asChild>
-                      <motion.div
-                        className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{
-                          opacity: 1, 
-                          y: [0, -8, 0], // Floating animation
-                          transition: {
-                            duration: 4,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                            delay: index * 0.2
-                          }
-                        }}
-                        transition={{ duration: 0.5, delay: 0.1 * index }}
-                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                      >
-                        <tech.icon className={`h-10 w-10 ${tech.color}`} />
-                        <span className="mt-3 text-sm text-gray-300">{tech.name}</span>
-                      </motion.div>
-                    </TooltipTrigger>
-                    <TooltipContent className="bg-gray-900 border border-gray-700 text-white">
-                      <p>{tech.description}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
-              </div>
-            </TooltipProvider>
-          </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+  className="mt-24"
+>
+  <h2 className="text-3xl font-bold mb-8 text-left">Tech Stack</h2>
+  <TooltipProvider>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-h-[400px] overflow-y-auto">
+      {techStack.map((tech, index) => (
+        <Tooltip key={tech.name}>
+          <TooltipTrigger asChild>
+            <motion.div
+              className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{
+                opacity: 1,
+                y: [0, -8, 0], // Floating animation
+                transition: {
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: index * 0.2,
+                },
+              }}
+              transition={{ duration: 1, delay: 0.1 * index }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
+            >
+              <tech.icon className={`h-10 w-10 ${tech.color}`} />
+              <span className="mt-3 text-sm text-gray-300">{tech.name}</span>
+            </motion.div>
+          </TooltipTrigger>
+          <TooltipContent className="bg-gray-900 border border-gray-700 text-white">
+            <p>{tech.description}</p>
+          </TooltipContent>
+        </Tooltip>
+      ))}
+    </div>
+  </TooltipProvider>
+</motion.div>
+
 {/* Testimonial Section */}
 <motion.div
   initial={{ opacity: 0 }}
@@ -136,7 +136,6 @@ const Hero = () => {
   className="mt-24"
 >
   <h2 className="text-3xl font-bold mb-8 text-left">Testimonials</h2>
-  
   <div className="relative overflow-x-auto scrollbar-hide flex gap-6 snap-x snap-mandatory px-2 sm:px-0">
     {testimonials.map((testimonial, index) => (
       <div 
@@ -198,23 +197,76 @@ const services = [
 ];
 
 const techStack = [
+  // Frontend Development
+  {
+    name: "HTML",
+    icon: () => <img src="/images/html.svg" alt="HTML Logo" className="h-10 w-10" />,
+    color: "text-orange-400",
+    description: "Markup language for web pages"
+  },
+  {
+    name: "CSS",
+    icon: () => <img src="/images/css.svg" alt="CSS Logo" className="h-10 w-10" />,
+    color: "text-blue-500",
+    description: "Styling language for web pages"
+  },
+  {
+    name: "JavaScript",
+    icon: () => <img src="/images/javascript.svg" alt="Java Script" className="h-10 w-10" />, 
+    color: "text-yellow-500",
+    description: "Programming language for web development"
+  },
   {
     name: "React",
-    icon: Code,
+    icon: () => <img src="/images/react.svg" alt="React" className="h-10 w-10" />,
     color: "text-blue-400",
     description: "Building interactive UIs with React"
+  },
+  {
+    name: "Tailwind CSS",
+    icon: () => <img src="/images/tailwind.svg" alt="tailwind" className="h-10 w-10" />,
+    color: "text-cyan-400",
+    description: "Utility-first CSS framework"
+  },
+  {
+    name: "Bootstrap",
+    icon: () => <img src="/images/bootstrap.svg" alt="Bootstrap Logo" className="h-10 w-10" />,
+    color: "text-purple-500",
+    description: "CSS framework for responsive design"
+  },
+  {
+    name: "Figma",
+    icon: () => <img src="/images/figma.svg" alt="figma logo" className="h-10 w-10" />,
+    color: "text-purple-500",
+    description: "Designs responsive design"
+  },
+
+  // Backend Development
+  {
+    name: "Python (Django)",
+    icon: () => <img src="/images/python.svg" alt="Python Logo" className="h-10 w-10" />, 
+    color: "text-blue-400",
+    description: "Backend web development framework"
   },
   {
     name: "Node.js",
     icon: Server,
     color: "text-green-400",
-    description: "Server-side JavaScript runtime"
+    description: "JavaScript runtime for backend development"
   },
   {
-    name: "TypeScript",
-    icon: Command,
-    color: "text-blue-500",
-    description: "Strongly typed programming language"
+    name: "Firebase Auth",
+    icon: () => <img src="/images/firebase.svg" alt="Firebase Logo" className="h-10 w-10" />,
+    color: "text-yellow-400",
+    description: "Authentication for web and mobile apps"
+  },
+
+  // Database Management
+  {
+    name: "PostgreSQL",
+    icon: Database,
+    color: "text-green-500",
+    description: "Relational database management system"
   },
   {
     name: "MongoDB",
@@ -223,28 +275,43 @@ const techStack = [
     description: "NoSQL database for modern applications"
   },
   {
-    name: "Tailwind CSS",
-    icon: Layers,
-    color: "text-cyan-400",
-    description: "Utility-first CSS framework"
+    name: "Firebase Firestore",
+    icon: Database,
+    color: "text-green-400",
+    description: "NoSQL cloud database from Firebase"
   },
+
+  // DevOps & Deployment
   {
-    name: "Python",
-    icon: () => <img src="/images/python.svg" alt="Python Logo" className="h-10 w-10" />, 
+    name: "Vercel",
+    icon: Globe,
     color: "text-blue-400",
-    description: "Backend & AI development"
-},
-  {
-    name: "Solidity",
-    icon: Code,
-    color: "text-yellow-500",
-    description: "Smart contract programming language"
+    description: "Cloud platform for static sites and serverless functions"
   },
   {
-    name: "Flutter",
-    icon: () => <img src="/images/flutter.svg" alt="Python Logo" className="h-10 w-10" />, 
-    color: "text-orange-400",
-    description: "Ethereum JavaScript API"
+    name: "Netlify",
+    icon: Globe,
+    color: "text-green-400",
+    description: "Hosting and automation platform"
+  },
+  {
+    name: "AWS",
+    icon: Globe,
+    color: "text-yellow-500",
+    description: "Cloud hosting and services"
+  },
+  {
+    name: "Render",
+    icon: Globe,
+    color: "text-indigo-500",
+    description: "Cloud platform for web applications"
+  },
+  {
+    name: "GitHub",
+    icon: () => <img src="/images/github.svg" alt="github logo" className="h-10 w-10" />,
+    color: "text-gray-500",
+    description: "Automates code integration, testing, and deployment."
+
   }
 ];
 
