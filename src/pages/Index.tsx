@@ -9,10 +9,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
   // Mouse position state for custom cursor effect
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -35,16 +37,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      {/* Custom cursor */}
-      <div 
-        className="fixed w-6 h-6 rounded-full border-2 border-white/50 pointer-events-none z-50 mix-blend-difference hidden md:block"
-        style={{
-          left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`,
-          transform: "translate(-50%, -50%)",
-          transition: "transform 0.1s ease-out, left 0.15s ease-out, top 0.15s ease-out"
-        }}
-      />
+      {/* Custom cursor - only show on desktop */}
+      {!isMobile && (
+        <div 
+          className="fixed w-6 h-6 rounded-full border-2 border-white/50 pointer-events-none z-50 mix-blend-difference hidden md:block"
+          style={{
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`,
+            transform: "translate(-50%, -50%)",
+            transition: "transform 0.1s ease-out, left 0.15s ease-out, top 0.15s ease-out"
+          }}
+        />
+      )}
       
       {/* Gradient background effect */}
       <div className="fixed inset-0 bg-black z-[-2]" />
