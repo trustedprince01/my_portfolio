@@ -32,7 +32,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-black text-white relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-20 bg-black text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full filter blur-3xl"></div>
@@ -49,25 +49,26 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12"
         >
           CONTACT
         </motion.h2>
         
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="text-center md:text-left"
           >
-            <h3 className="text-2xl font-semibold mb-6">Let's connect!</h3>
-            <p className="text-gray-400 mb-8">
+            <h3 className="text-xl font-semibold mb-6">Let's connect!</h3>
+            <p className="text-sm sm:text-base text-gray-400 mb-8">
               Get in touch to start a conversation about your project. You can expect 
               a prompt response with an honest assessment of whether I'm a good fit for your needs.
             </p>
             
-            <div className="space-y-4 text-gray-400 text-sm">
+            <div className="space-y-4 text-xs sm:text-sm text-gray-400">
               <p>• Please send a detailed request that is easy to understand.</p>
               <p>• I would love to know what high priority, medium priority, and low priority features/functionalities entails.</p>
               <p className="text-yellow-400">• I would happily consider your job-type, but for the Hourly one is recommended.</p>
@@ -79,11 +80,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10"
+            className="bg-white/5 p-4 sm:p-6 rounded-lg backdrop-blur-sm border border-white/10"
           >
-            <h3 className="text-xl font-semibold mb-6 text-center">Contact me</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-6 text-center">Contact me</h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 sm:space-y-6">
                 <FormField
                   control={form.control}
                   name="name"
@@ -93,10 +94,10 @@ const Contact = () => {
                         <Input 
                           placeholder="Name" 
                           {...field} 
-                          className="bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-gray-500"
+                          className="bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-gray-500 text-sm sm:text-base h-10 sm:h-11"
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-xs sm:text-sm" />
                     </FormItem>
                   )}
                 />
@@ -110,10 +111,10 @@ const Contact = () => {
                         <Input 
                           placeholder="Email" 
                           {...field} 
-                          className="bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-gray-500"
+                          className="bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-gray-500 text-sm sm:text-base h-10 sm:h-11"
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-xs sm:text-sm" />
                     </FormItem>
                   )}
                 />
@@ -125,22 +126,22 @@ const Contact = () => {
                     <FormItem>
                       <FormControl>
                         <textarea
-                          className="w-full min-h-[120px] rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus:border-white/30 focus:outline-none"
+                          className="w-full min-h-[100px] sm:min-h-[120px] rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm sm:text-base text-white placeholder:text-gray-500 focus:border-white/30 focus:outline-none"
                           placeholder="Message"
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-xs sm:text-sm" />
                     </FormItem>
                   )}
                 />
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-white text-black hover:bg-white/90 transition-all group"
+                  className="w-full bg-white text-black hover:bg-white/90 transition-all group text-sm sm:text-base"
                 >
                   SUBMIT
-                  <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Send className="ml-2 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
             </Form>
