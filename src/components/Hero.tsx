@@ -1,10 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Code, Database, Globe, Server, Layers, Command } from "lucide-react";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Typewriter } from 'react-simple-typewriter';
+
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -172,36 +172,37 @@ const Hero = () => {
 
 const services = [
   {
-    title: "Web & UI Design",
+    title: "Web Development",
     icons: [ArrowRight, ArrowRight, ArrowRight],
     iconColors: ["text-red-400", "text-blue-400", "text-green-400"],
     description: "Creating beautiful and functional interfaces with a focus on user experience and accessibility."
   },
+  
   {
-    title: "SEO & Webmaster Services",
-    icons: [ArrowRight, ArrowRight, ArrowRight],
-    iconColors: ["text-yellow-400", "text-purple-400", "text-yellow-400"],
-    description: "Optimizing websites for search engines to increase visibility and drive organic traffic."
-  },
-  {
-    title: "Full-stack Development",
+    title: "Mobile Development",
     icons: [ArrowRight, ArrowRight, ArrowRight],
     iconColors: ["text-blue-400", "text-red-400", "text-green-400"],
-    description: "Building complete web applications from front-end interfaces to back-end systems and databases."
-  },
-  {
-    title: "Full-stack Development",
-    icons: [ArrowRight, ArrowRight, ArrowRight],
-    iconColors: ["text-blue-400", "text-red-400", "text-green-400"],
-    description: "Building complete web applications from front-end interfaces to back-end systems and databases."
-  }
+    description: "Creating cross-platform and native mobile applications with seamless user experiences."
+},
+{
+  title: "UI/UX Design",
+  icons: [ArrowRight, ArrowRight, ArrowRight],
+  iconColors: ["text-blue-400", "text-pink-400", "text-blue-400"],
+  description: "Crafting intuitive and visually appealing user experiences for web and mobile applications."
+},
+{
+  title: "System Architecture",
+  icons: [ArrowRight, ArrowRight, ArrowRight],
+  iconColors: ["text-blue-400", "text-red-400", "text-green-400"],
+  description: "APIs, endpoints, auth, hosting, git, deployment and maintenance." 
+}
 ];
 
 const techStack = [
   // Frontend Development
   {
     name: "HTML",
-    icon: () => <img src="/images/html.svg" alt="HTML Logo" className="h-10 w-10" />,
+    icon: (props: { className?: string }) => <img src="/images/html.svg" alt="HTML Logo" className={`h-10 w-10 ${props.className || ""}`} />,
     color: "text-orange-400",
     description: "Markup language for web pages"
   },
@@ -262,6 +263,13 @@ const techStack = [
     description: "Authentication for web and mobile apps"
   },
 
+  {
+    name: "Flutter",
+    icon: () => <img src="/images/flutter.svg" alt="Flutter Logo" className="h-10 w-10" />,
+    color: "text-blue-500",
+    description: "UI toolkit for building natively compiled applications",
+  },
+
   // Database Management
   {
     name: "PostgreSQL",
@@ -275,35 +283,30 @@ const techStack = [
     color: "text-green-500",
     description: "NoSQL database for modern applications"
   },
-  {
-    name: "Firebase Firestore",
-    icon: Database,
-    color: "text-green-400",
-    description: "NoSQL cloud database from Firebase"
-  },
+  
 
   // DevOps & Deployment
   {
     name: "Vercel",
-    icon: Globe,
+    icon: () => <img src="/images/vercel.svg" alt="vercel" className="h-10 w-10" />,
     color: "text-blue-400",
     description: "Cloud platform for static sites and serverless functions"
   },
   {
     name: "Netlify",
-    icon: Globe,
+    icon: () => <img src="/images/netlify.svg" alt="netflify" className="h-10 w-10" />,
     color: "text-green-400",
     description: "Hosting and automation platform"
   },
   {
-    name: "AWS",
-    icon: Globe,
-    color: "text-yellow-500",
-    description: "Cloud hosting and services"
+    name: "Cloudinary",
+    icon: () => <img src="/images/cloudinary.svg" alt="render logo" className="h-10 w-10" />,
+    color: "text-blue-500",
+    description: "Media optimization and cloud storage",
   },
   {
     name: "Render",
-    icon: Globe,
+    icon: () => <img src="/images/render.jpg" alt="render logo" className="h-10 w-10" />,
     color: "text-indigo-500",
     description: "Cloud platform for web applications"
   },
