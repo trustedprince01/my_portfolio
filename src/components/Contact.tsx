@@ -25,10 +25,24 @@ const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // In a real application, you would send this data to a server
-    alert("Message sent! (This is just a demo)");
-    form.reset();
+    fetch("https://formsubmit.co/ajax/chibuzorprince68@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: values.name,
+        email: values.email,
+        message: values.message,
+        _template: "custom", // Tells FormSubmit to use your custom template
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Failed to send message");
+        alert("Message sent successfully!");
+        form.reset(); // Resets the form after submitting
+      })
+      .catch((error) => alert(error.message));
   }
 
   return (
