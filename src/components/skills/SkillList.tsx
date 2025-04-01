@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { SkillBar } from "./SkillBar";
 import { skillsData } from "./skillsData";
