@@ -1,5 +1,5 @@
 
-import HeroSection from "@/components/Hero";
+import { HeroSection } from "@/components/hero";
 
 const Hero = () => {
   return <HeroSection />;
