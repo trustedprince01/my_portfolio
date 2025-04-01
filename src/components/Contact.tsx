@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -16,8 +15,6 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
-  const { toast } = useToast();
-  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -28,40 +25,10 @@ const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    fetch("https://formsubmit.co/ajax/chibuzorprince68@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: values.name,
-        email: values.email,
-        message: values.message,
-        _template: "custom", // Tells FormSubmit to use your custom template
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error("Failed to send message");
-        
-        // Show success toast instead of alert
-        toast({
-          title: "Message Sent",
-          description: "Your message has been sent successfully!",
-          variant: "default",
-          className: "bg-green-500 border-green-600 text-white",
-        });
-        
-        form.reset(); // Resets the form after submitting
-      })
-      .catch((error) => {
-        // Show error toast instead of alert
-        toast({
-          title: "Error",
-          description: error.message || "Failed to send message",
-          variant: "destructive",
-          className: "bg-red-500 border-red-600 text-white",
-        });
-      });
+    console.log(values);
+    // In a real application, you would send this data to a server
+    alert("Message sent! (This is just a demo)");
+    form.reset();
   }
 
   return (
@@ -130,7 +97,7 @@ const Contact = () => {
                           className="bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-gray-500 text-sm sm:text-base h-10 sm:h-11"
                         />
                       </FormControl>
-                      <FormMessage className="text-xs sm:text-sm mt-1.5 font-medium text-red-400" />
+                      <FormMessage className="text-xs sm:text-sm" />
                     </FormItem>
                   )}
                 />
@@ -147,7 +114,7 @@ const Contact = () => {
                           className="bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-gray-500 text-sm sm:text-base h-10 sm:h-11"
                         />
                       </FormControl>
-                      <FormMessage className="text-xs sm:text-sm mt-1.5 font-medium text-red-400" />
+                      <FormMessage className="text-xs sm:text-sm" />
                     </FormItem>
                   )}
                 />
@@ -164,7 +131,7 @@ const Contact = () => {
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage className="text-xs sm:text-sm mt-1.5 font-medium text-red-400" />
+                      <FormMessage className="text-xs sm:text-sm" />
                     </FormItem>
                   )}
                 />
@@ -172,9 +139,8 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   className="w-full bg-white text-black hover:bg-white/90 transition-all group text-sm sm:text-base"
-                  disabled={form.formState.isSubmitting}
                 >
-                  {form.formState.isSubmitting ? "SENDING..." : "SUBMIT"}
+                  SUBMIT
                   <Send className="ml-2 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>

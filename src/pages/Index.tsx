@@ -10,7 +10,6 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   // Mouse position state for custom cursor effect
@@ -65,7 +64,6 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
-      <Toaster />
     </div>
   );
 };
