@@ -86,6 +86,7 @@ const Resume = () => {
                         <li>Smart Contract Development</li>
                         <li>Blockchain Security</li>
                         <li>Web3 Integration</li>
+                        <li>Stil learning ...................</li>
                       </ul>
                     </div>
                   </div>
