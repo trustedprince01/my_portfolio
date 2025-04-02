@@ -108,11 +108,13 @@ const Resume = () => {
                       programming while working on real-world projects.
                     </p>
                     <ul className="list-disc pl-5 mt-3 text-xs sm:text-sm text-gray-300 space-y-2">
-                      <li>Designed wireframes & prototypes using Figma.</li>
-                      <li>Built web interfaces with HTML, CSS, and JavaScript.</li>
-                      <li>Developed backend systems using Python, Django, and MySQL.</li>
-                      <li>Currently learning Web3 development, focusing on smart contracts and blockchain integration.</li>
-                    </ul>
+                    <li>Designed wireframes & prototypes using Figma.</li>
+                    <li>Built web interfaces with HTML, CSS, and JavaScript.</li>
+                    <li>Developed backend systems using Python, Django, and MySQL.</li>
+                    <li>Created dynamic and interactive UIs using React and TypeScript.</li>
+                    <li>Implemented state management and API integrations in React apps.</li>
+                    <li>Currently learning Web3 development, focusing on smart contracts and blockchain integration.</li>
+                  </ul>
                   </div>
                 </div>
               </div>
