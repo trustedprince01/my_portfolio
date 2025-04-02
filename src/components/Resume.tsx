@@ -59,33 +59,31 @@ const Resume = () => {
                 <div className="mb-4">
                   <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-blue-800 rounded-full -left-1.5 sm:-left-2 mt-1"></div>
                   <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-8">
-                    <span className="text-blue-300 font-semibold text-sm sm:text-base">2023-2025</span>
+                    <span className="text-blue-300 font-semibold text-sm sm:text-base">2023-2024</span>
                     <div>
-                      <h4 className="font-bold text-sm sm:text-base">Advanced Diploma in Software Engineering</h4>
-                      <p className="text-blue-300 text-xs sm:text-sm">Aptech Computer Education, Lagos, NG</p>
+                      <h4 className="font-bold text-sm sm:text-base">Software Engineering</h4>
+                      <p className="text-blue-300 text-xs sm:text-sm">Aptech Computer Education</p>
                       <ul className="list-disc pl-5 mt-2 text-xs sm:text-sm text-gray-300">
-                        <li>Product Design: UI/UX principles, user research, Figma wireframing & prototyping</li>
-                        <li>Frontend: HTML, CSS, JavaScript, React for responsive web applications</li>
-                        <li>Backend: Python, Django, database management systems</li>
-                        <li>Mobile: Cross-platform app development with Flutter</li>
-                        <li>Architecture: Software design patterns, microservices, scalable systems</li>
+                        <li>Figma UI/UX Design</li>
+                        <li>HTML, CSS, and JavaScript Fundamentals</li>
+                        <li>Python Basics & Backend Development</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                {/* Cyfrin Updraft Course */}
+                {/* New Course */}
                 <div className="mb-4">
                   <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-blue-800 rounded-full -left-1.5 sm:-left-2 mt-1"></div>
                   <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-8">
                     <span className="text-blue-300 font-semibold text-sm sm:text-base">2024-2025</span>
                     <div>
-                      <h4 className="font-bold text-sm sm:text-base">Blockchain Development</h4>
+                      <h4 className="font-bold text-sm sm:text-base">[New Course Name]</h4>
                       <p className="text-blue-300 text-xs sm:text-sm">Cyfrin Updraft</p>
                       <ul className="list-disc pl-5 mt-2 text-xs sm:text-sm text-gray-300">
-                        <li>Smart Contract Development</li>
-                        <li>Blockchain Security</li>
-                        <li>Web3 Integration</li>
+                        <li>[Key topic 1]</li>
+                        <li>[Key topic 2]</li>
+                        <li>[Key topic 3]</li>
                       </ul>
                     </div>
                   </div>
