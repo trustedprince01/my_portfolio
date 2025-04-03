@@ -70,7 +70,7 @@ const projects = [
     category: "UI/UX",
     image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
     githubUrl: "#",
-    demoUrl: "#"
+    demoUrl: "https://www.figma.com/proto/example-link" // Example Figma prototype link
   }
 ];
 
@@ -185,11 +185,22 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/10">
-                      <a href={project.githubUrl} className="text-gray-400 hover:text-white flex items-center text-xs">
-                        <Github className="mr-1 h-3 w-3" /> View Code
-                      </a>
-                      <a href={project.demoUrl} className="text-gray-400 hover:text-white flex items-center text-xs">
-                        <Eye className="mr-1 h-3 w-3" /> Live Demo
+                      {/* Only show View Code for non-UI/UX projects */}
+                      {project.category !== "UI/UX" ? (
+                        <a href={project.githubUrl} className="text-gray-400 hover:text-white flex items-center text-xs">
+                          <Github className="mr-1 h-3 w-3" /> View Code
+                        </a>
+                      ) : (
+                        <span className="text-xs text-gray-500">Design Project</span>
+                      )}
+                      <a 
+                        href={project.demoUrl} 
+                        className="text-gray-400 hover:text-white flex items-center text-xs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Eye className="mr-1 h-3 w-3" /> 
+                        {project.category === "UI/UX" ? "View Design" : "Live Demo"}
                       </a>
                     </div>
                   </CardContent>
