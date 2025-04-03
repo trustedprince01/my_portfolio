@@ -14,12 +14,12 @@ import {
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-featured online store with shopping cart and payment processing",
-    tags: ["React", "Node.js", "MongoDB"],
+    title: "Portfolio Website",
+    description: "A showcase of my skills and projects",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
     category: "Frontend",
-    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
-    githubUrl: "#",
+    image: "/images/Portfolio.png",
+    githubUrl: "https://github.com/trustedprince01/my_portfolio",
     demoUrl: "#"
   },
   {
@@ -54,12 +54,12 @@ const projects = [
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    description: "A showcase of my skills and projects",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
-    category: "UI/UX",
-    image: "/images/Portfolio.png",
-    githubUrl: "https://github.com/trustedprince01/my_portfolio",
+    title: "E-commerce Platform",
+    description: "A full-featured online store with shopping cart and payment processing",
+    tags: ["React", "Node.js", "MongoDB"],
+    category: "Frontend",
+    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
+    githubUrl: "#",
     demoUrl: "#"
   },
   {
