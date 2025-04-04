@@ -147,7 +147,7 @@ const projects = [
     category: "UI/UX",
     image: "/images/sh.png",
     githubUrl: "#",
-    demoUrl: "https://www.figma.com/proto/Ija9Hxs3d1m8VUb8Ggd5b8/About-Us-Page?page-id=0%3A1&node-id=1-2&viewport=1151%2C715%2C0.28&t=Vh5nGbaRBzbRuq9s-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2" 
+    demoUrl: "https://www.figma.com/proto/example-link" // Example Figma prototype link
   }
 ];
 
@@ -262,22 +262,11 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/10">
-                      {/* Only show View Code for non-UI/UX projects */}
-                      {project.category !== "UI/UX" ? (
-                        <a href={project.githubUrl} className="text-gray-400 hover:text-white flex items-center text-xs">
-                          <Github className="mr-1 h-3 w-3" /> View Code
-                        </a>
-                      ) : (
-                        <span className="text-xs text-gray-500">Design Project</span>
-                      )}
-                      <a 
-                        href={project.demoUrl} 
-                        className="text-gray-400 hover:text-white flex items-center text-xs"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Eye className="mr-1 h-3 w-3" /> 
-                        {project.category === "UI/UX" ? "View Design" : "Live Demo"}
+                      <a href={project.githubUrl} className="text-gray-400 hover:text-white flex items-center text-xs">
+                        <Github className="mr-1 h-3 w-3" /> View Code
+                      </a>
+                      <a href={project.demoUrl} className="text-gray-400 hover:text-white flex items-center text-xs">
+                        <Eye className="mr-1 h-3 w-3" /> Live Demo
                       </a>
                     </div>
                   </CardContent>
