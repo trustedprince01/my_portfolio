@@ -44,13 +44,13 @@ const projects = [
   },
   {
     id: 4,
-    title: "Social Media API",
-    description: "Backend services for a social networking platform",
-    tags: ["Node.js", "Express", "MongoDB"],
+    title: "Food ordering service site",
+    description: "Backend services for a food Ordering system",
+    tags: ["Python", "Django", "Railways", "PostgreSQL"],
     category: "Backend",
-    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
-    githubUrl: "#",
-    demoUrl: "#"
+    image: "/images/sem4.png",
+    githubUrl: "https://github.com/trustedprince01/foodordering",
+    demoUrl: "http://127.0.0.1:8000/"
   },
   {
     id: 5,
@@ -64,13 +64,90 @@ const projects = [
   },
   {
     id: 6,
-    title: "Blog Platform Design",
-    description: "User interface design for a content management system",
+    title: "Redesigned Nike Platform Design",
+    description: "User interface design for a Nike display page",
     tags: ["Figma", "UI/UX", "Prototype"],
     category: "UI/UX",
-    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
+    image: "/images/nike.png",
     githubUrl: "#",
-    demoUrl: "https://www.figma.com/proto/example-link" // Example Figma prototype link
+    demoUrl: "https://www.figma.com/proto/jMvcGyY4inOFNUATMTuh61/NIKE-DESIGN?page-id=0%3A1&node-id=4-89&viewport=-254%2C4809%2C0.27&t=UW3hZOBJyuaFFLSF-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A46" 
+  },
+  {
+    id: 7,
+    title: "Apple watch store Design",
+    description: "User interface design for a Apple display page",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/applewatch.svg",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/JnGKk8Nmir69ro6uO0CDM4/apple?node-id=1-2&t=bcfzk1pOpRYOxiZI-1" 
+  },
+
+  { id: 8,
+    title: "Redesigned Nike Platform Design",
+    description: "User interface design for a Nike display page",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/nike2.svg",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/uSF1rlEbs7cmsOHkRJ5ENl/NIke-shoe?node-id=11-2&t=lQwi4Zbt4mcosMZz-1" 
+  },
+  { id: 9,
+    title: "Moon and sun Effect",
+    description: "Sun and Moon toggle effect ",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/sunandmoon.png",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/hu2pYYkxoRHYe3a2147mac/sun-and-moon-effect?node-id=25-19&t=mlsZwfpoKU3hlN0W-1" 
+  },
+ 
+  { id: 10,
+    title: "Food Delivery site",
+    description: "A user-friendly food delivery website",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/fastfood.svg",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/i7GPtiPM0DabrjeEMiU8NX/Untitled?node-id=0-1&t=0fAbhLUzcJICtLFw-1" 
+  },
+  { id: 11,
+    title: "Food ordering site",
+    description: "A user-friendly food website",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/p_place.png",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/4s2V5bBBEs2ID1OEtYZs1W/food-Landing-page?node-id=0-1&t=KPW9gFOrNSdKIVAH-1" 
+  },
+  { id: 12,
+    title: "Whatsapp Redesign",
+    description: "A redesign of whatsapp mobile UI",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/whatsapp.svg",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/design/hQvVyDyCJfaNyTj3ZIkOhn/A1?node-id=0-1&t=A3ZEN3V0CmKYhTXo-1" 
+  }, 
+
+  { id: 13,
+    title: "city guide App UI design",
+    description: "A design for a mobile city guide app",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/cityguide.png",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/RIlMaCH78WU6Yd3HtwVCUe/sems-3-project?node-id=0-1&t=Fo4RDAPD13BJwakQ-1" 
+  }, 
+
+  { id: 14,
+    title: "TechSphere Innovation Hub",
+    description: "A design for a Tech company",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/sh.png",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/Ija9Hxs3d1m8VUb8Ggd5b8/About-Us-Page?page-id=0%3A1&node-id=1-2&viewport=1151%2C715%2C0.28&t=Vh5nGbaRBzbRuq9s-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2" 
   }
 ];
 
