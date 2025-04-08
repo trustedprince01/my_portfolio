@@ -54,16 +54,6 @@ const projects = [
   },
   {
     id: 5,
-    title: "E-commerce Platform",
-    description: "A full-featured online store with shopping cart and payment processing",
-    tags: ["React", "Node.js", "MongoDB"],
-    category: "Frontend",
-    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
-    githubUrl: "#",
-    demoUrl: "#"
-  },
-  {
-    id: 6,
     title: "Redesigned Nike Platform Design",
     description: "User interface design for a Nike display page",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -73,7 +63,7 @@ const projects = [
     demoUrl: "https://www.figma.com/proto/jMvcGyY4inOFNUATMTuh61/NIKE-DESIGN?page-id=0%3A1&node-id=4-89&viewport=-254%2C4809%2C0.27&t=UW3hZOBJyuaFFLSF-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A46" 
   },
   {
-    id: 7,
+    id: 6,
     title: "Apple watch store Design",
     description: "User interface design for a Apple display page",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -83,7 +73,7 @@ const projects = [
     demoUrl: "https://www.figma.com/proto/JnGKk8Nmir69ro6uO0CDM4/apple?node-id=1-2&t=bcfzk1pOpRYOxiZI-1" 
   },
 
-  { id: 8,
+  { id: 7,
     title: "Redesigned Nike Platform Design",
     description: "User interface design for a Nike display page",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -92,7 +82,7 @@ const projects = [
     githubUrl: "#",
     demoUrl: "https://www.figma.com/proto/uSF1rlEbs7cmsOHkRJ5ENl/NIke-shoe?node-id=11-2&t=lQwi4Zbt4mcosMZz-1" 
   },
-  { id: 9,
+  { id: 8,
     title: "Moon and sun Effect",
     description: "Sun and Moon toggle effect ",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -102,16 +92,16 @@ const projects = [
     demoUrl: "https://www.figma.com/proto/hu2pYYkxoRHYe3a2147mac/sun-and-moon-effect?node-id=25-19&t=mlsZwfpoKU3hlN0W-1" 
   },
  
-  { id: 10,
+  { id: 9,
     title: "Food Delivery site",
     description: "A user-friendly food delivery website",
     tags: ["Figma", "UI/UX", "Prototype"],
     category: "UI/UX",
     image: "/images/fastfood.svg",
     githubUrl: "#",
-    demoUrl: "https://www.figma.com/proto/i7GPtiPM0DabrjeEMiU8NX/Untitled?node-id=0-1&t=0fAbhLUzcJICtLFw-1" 
+    demoUrl: "https://www.figma.com/design/dphaFZwmuV45iMJXpXivsA/desktop-site?node-id=0-1&t=RViGvzSuRlRYxC8k-1" 
   },
-  { id: 11,
+  { id: 10,
     title: "Food ordering site",
     description: "A user-friendly food website",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -120,7 +110,7 @@ const projects = [
     githubUrl: "#",
     demoUrl: "https://www.figma.com/proto/4s2V5bBBEs2ID1OEtYZs1W/food-Landing-page?node-id=0-1&t=KPW9gFOrNSdKIVAH-1" 
   },
-  { id: 12,
+  { id: 11,
     title: "Whatsapp Redesign",
     description: "A redesign of whatsapp mobile UI",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -130,7 +120,7 @@ const projects = [
     demoUrl: "https://www.figma.com/design/hQvVyDyCJfaNyTj3ZIkOhn/A1?node-id=0-1&t=A3ZEN3V0CmKYhTXo-1" 
   }, 
 
-  { id: 13,
+  { id: 12,
     title: "city guide App UI design",
     description: "A design for a mobile city guide app",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -140,15 +130,34 @@ const projects = [
     demoUrl: "https://www.figma.com/proto/RIlMaCH78WU6Yd3HtwVCUe/sems-3-project?node-id=0-1&t=Fo4RDAPD13BJwakQ-1" 
   }, 
 
-  { id: 14,
+  { id: 13,
     title: "TechSphere Innovation Hub",
     description: "A design for a Tech company",
     tags: ["Figma", "UI/UX", "Prototype"],
     category: "UI/UX",
     image: "/images/sh.png",
     githubUrl: "#",
-    demoUrl: "https://www.figma.com/proto/example-link" // Example Figma prototype link
-  }
+    demoUrl: "https://www.figma.com/design/Ija9Hxs3d1m8VUb8Ggd5b8/About-Us-Page?node-id=0-1&t=QvP4okNJOZ6pkswm-1" 
+  },
+ {
+    id: 14,
+    title: "Food delievery website",
+    description: "A front-end design for food ordering for backend ",
+    tags: ["React", "Tailwind CSS", "Html and css"],
+    category: "Frontend",
+    image:"/images/foo.png",
+    githubUrl: "https://github.com/trustedprince01/fast-food",
+    demoUrl: "https://fastyfoo.netlify.app/"
+  },
+  { id: 14,
+    title: "Apple vision pro",
+    description: "A design for a Apple vision pro",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/applevision.png",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/UZC6sqVtzVvwr8VRv7OwZx/APPLE-VISON-PRO?node-id=0-1&t=eNW7Sp9qjQTpcJRH-1" 
+  },
 ];
 
 const categories = ["All", "Frontend", "Backend", "UI/UX"];
