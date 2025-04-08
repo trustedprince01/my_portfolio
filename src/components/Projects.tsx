@@ -16,7 +16,7 @@ const projects = [
     id: 1,
     title: "Portfolio Website",
     description: "A showcase of my skills and projects",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    tags: ["React", "Tailwind CSS", "Html and css"],
     category: "Frontend",
     image: "/images/Portfolio.png",
     githubUrl: "https://github.com/trustedprince01/my_portfolio",
@@ -24,33 +24,33 @@ const projects = [
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A productivity tool for organizing and tracking personal and team tasks",
-    tags: ["React", "Firebase", "Tailwind CSS"],
+    title: "Food ordering site",
+    description: "A website for user-friendly food website",
+    tags: ["React", "Tailwind CSS"],
     category: "Frontend",
-    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
-    githubUrl: "#",
-    demoUrl: "#"
+    image: "/images/pfood.png",
+    githubUrl: "https://github.com/trustedprince01/p_palace_food",
+    demoUrl: "https://ppalacefood.netlify.app/"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
+    title: "Banking Dashboard",
     description: "Real-time weather forecasting with location-based services",
-    tags: ["JavaScript", "REST API", "CSS"],
+    tags: ["React", "Tailwind CSS", "Html and css"],
     category: "Frontend",
-    image: "/lovable-uploads/d06b5809-1a8d-4942-9949-ffc2b8c1d125.png",
+    image:"/images/dashboard.png",
     githubUrl: "#",
-    demoUrl: "#"
+    demoUrl: "https://princepay-expensesdashboard.netlify.app/"
   },
   {
     id: 4,
     title: "Food ordering service site",
-    description: "Backend services for a food Ordering system",
-    tags: ["Python", "Django", "Railways", "PostgreSQL"],
+    description: "Backend services for food Ordering system",
+    tags: ["Python(Django)", "Railways", "Cloudinary"],
     category: "Backend",
     image: "/images/sem4.png",
     githubUrl: "https://github.com/trustedprince01/foodordering",
-    demoUrl: "http://127.0.0.1:8000/"
+    demoUrl: "https://foodordering-productions.up.railway.app/"
   },
   {
     id: 5,
@@ -147,7 +147,17 @@ const projects = [
     category: "UI/UX",
     image: "/images/sh.png",
     githubUrl: "#",
-    demoUrl: "https://www.figma.com/proto/example-link" // Example Figma prototype link
+    demoUrl: "https://www.figma.com/proto/Ija9Hxs3d1m8VUb8Ggd5b8/About-Us-Page?page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2&t=HsAuxTHqMXB5lafY-1" 
+  }, 
+
+  { id: 14,
+    title: "Apple vision pro",
+    description: "A design for Apple vision pro",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    category: "UI/UX",
+    image: "/images/applevision.png",
+    githubUrl: "#",
+    demoUrl: "https://www.figma.com/proto/UZC6sqVtzVvwr8VRv7OwZx/APPLE-VISON-PRO?page-id=0%3A1&node-id=1-2&viewport=422%2C397%2C0.53&t=kVdpBjcqtsFDzJlI-1&scaling=scale-down&content-scaling=fixed" 
   }
 ];
 
@@ -252,7 +262,7 @@ const Projects = () => {
                     </div>
                   </div>
                   <CardContent className="flex-grow flex flex-col p-4 sm:p-6 bg-black/80">
-                    <h3 className="text-base sm:text-lg font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-200">{project.title}</h3>
                     <p className="text-xs sm:text-sm text-gray-400 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag) => (
