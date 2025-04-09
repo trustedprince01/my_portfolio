@@ -78,12 +78,12 @@ export const techStack = [
     color: "text-cyan-400",
     description: "Utility-first CSS framework"
   },
-  {
-    name: "Bootstrap",
-    icon: () => <img src="/images/bootstrap.svg" alt="Bootstrap Logo" className="h-10 w-10" />,
-    color: "text-purple-500",
-    description: "CSS framework for responsive design"
-  },
+  // {
+  //   name: "Bootstrap",
+  //   icon: () => <img src="/images/bootstrap.svg" alt="Bootstrap Logo" className="h-10 w-10" />,
+  //   color: "text-purple-500",
+  //   description: "CSS framework for responsive design"
+  // },
   {
     name: "Figma",
     icon: () => <img src="/images/figma.svg" alt="figma logo" className="h-10 w-10" />,
@@ -98,12 +98,12 @@ export const techStack = [
     color: "text-blue-400",
     description: "Backend web development framework"
   },
-  {
-    name: "Node.js",
-    icon: () => <img src="/images/nodejs.svg" alt="nodejs" className="h-10 w-10" />, 
-    color: "text-green-400",
-    description: "JavaScript runtime for backend development"
-  },
+  // {
+  //   name: "Node.js",
+  //   icon: () => <img src="/images/nodejs.svg" alt="nodejs" className="h-10 w-10" />, 
+  //   color: "text-green-400",
+  //   description: "JavaScript runtime for backend development"
+  // },
   {
     name: "Firebase Auth",
     icon: () => <img src="/images/firebase.svg" alt="Firebase Logo" className="h-10 w-10" />,
@@ -125,20 +125,20 @@ export const techStack = [
     color: "text-green-500",
     description: "Relational database management system"
   },
-  {
-    name: "MongoDB",
-    icon: () => <img src="/images/mongodb.svg" alt="mongodb" className="h-10 w-10" />,
-    color: "text-green-500",
-    description: "NoSQL database for modern applications"
-  },
+  // {
+  //   name: "MongoDB",
+  //   icon: () => <img src="/images/mongodb.svg" alt="mongodb" className="h-10 w-10" />,
+  //   color: "text-green-500",
+  //   description: "NoSQL database for modern applications"
+  // },
   
   // DevOps & Deployment
-  {
-    name: "Vercel",
-    icon: () => <img src="/images/vercel.svg" alt="vercel" className="h-10 w-10" />,
-    color: "text-blue-400",
-    description: "Cloud platform for static sites and serverless functions"
-  },
+  // {
+  //   name: "Vercel",
+  //   icon: () => <img src="/images/vercel.svg" alt="vercel" className="h-10 w-10" />,
+  //   color: "text-blue-400",
+  //   description: "Cloud platform for static sites and serverless functions"
+  // },
   {
     name: "Netlify",
     icon: () => <img src="/images/netlify.svg" alt="netflify" className="h-10 w-10" />,
