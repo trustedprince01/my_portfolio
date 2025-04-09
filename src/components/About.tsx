@@ -49,15 +49,19 @@ const About = () => {
             className="text-center md:text-left"
           >
             <h3 className="text-xl sm:text-2xl font-semibold mb-4">Who I Am</h3>
-            <p className="text-sm sm:text-base text-gray-400 mb-6">
-              I'm a passionate front-end developer with expertise in React, TypeScript, and 
-              modern UI frameworks. With a strong focus on creating intuitive and responsive 
-              user interfaces, I strive to build applications that are both beautiful and functional.
-            </p>
-            <p className="text-sm sm:text-base text-gray-400">
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or enjoying outdoor activities to maintain a healthy work-life balance.
-            </p>
+<p className="text-sm sm:text-base text-gray-400 mb-6">
+  I’m a web developer driven by curiosity and creativity, blending design and logic to build sleek, responsive, and meaningful digital experiences. My current stack includes React, TypeScript, and modern UI frameworks — tools I use to bring ideas to life in ways that feel effortless to the user.
+</p>
+<p className="text-sm sm:text-base text-gray-400 mb-6">
+  I’m constantly exploring new tech, learning fast, and growing faster. I don’t just build — I evolve. And if you’re wondering how I handle pressure? 
+</p>
+<blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 mb-6">
+  "I never ask to be judged by my wins — judge me by my losses, because I have so few."
+</blockquote>
+<p className="text-sm sm:text-base text-gray-400">
+  When I’m not coding, you’ll catch me contributing to open-source, sharpening my backend skills, or touching grass and staying balanced beyond the screen.
+</p>
+
           </motion.div>
         </div>
       </div>

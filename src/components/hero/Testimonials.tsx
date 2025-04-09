@@ -42,24 +42,24 @@ export const Testimonials = () => {
 
 const testimonials = [
   {
-    name: "John Doe",
-    role: "Product Designer",
-    review: "Prince is an exceptional developer! His attention to detail and creative approach made our project a success.",
-    rating: 5,
+    name: "Abel promise",
+    role: "CEO at kings technology",
+    review: "Designed my website and it looks amazing!.",
+    rating: 4,
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    name: "Jane Smith",
-    role: "Startup Founder",
-    review: "Working with Prince was a game changer! His web development skills are top-notch.",
-    rating: 5,
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    name: "Samson",
+    role: "front-end developer",
+    review: "Helped me with my backend auth for my productivity site",
+    rating: 3,
+    avatar: "https://randomuser.me/api/portraits/men/47.jpg"
   },
-  {
-    name: "Michael Brown",
-    role: "Blockchain Engineer",
-    review: "Prince's understanding of smart contracts and Web3 is truly impressive. Highly recommend him!",
-    rating: 5,
-    avatar: "https://randomuser.me/api/portraits/men/76.jpg"
-  }
+  // {
+  //   name: "Michael Brown",
+  //   role: "Blockchain Engineer",
+  //   review: "Prince's understanding of smart contracts and Web3 is truly impressive. Highly recommend him!",
+  //   rating: 5,
+  //   avatar: "https://randomuser.me/api/portraits/men/76.jpg"
+  // }
 ];

@@ -95,17 +95,17 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-center md:text-left"
           >
-            <h3 className="text-xl font-semibold mb-6">Let's connect!</h3>
-            <p className="text-sm sm:text-base text-gray-400 mb-8">
-              Get in touch to start a conversation about your project. You can expect 
-              a prompt response with an honest assessment of whether I'm a good fit for your needs.
-            </p>
-            
-            <div className="space-y-4 text-xs sm:text-sm text-gray-400">
-              <p>• Please send a detailed request that is easy to understand.</p>
-              <p>• I would love to know what high priority, medium priority, and low priority features/functionalities entails.</p>
-              <p className="text-yellow-400">• I would happily consider your job-type, but for the Hourly one is recommended.</p>
-            </div>
+            <h3 className="text-xl font-semibold mb-6">Let's Connect!</h3>
+<p className="text-sm sm:text-base text-gray-400 mb-8">
+  Got a project in mind? Reach out and let’s chat. I’ll reply quickly and let you know if I’m the right fit.
+</p>
+
+<div className="space-y-4 text-xs sm:text-sm text-gray-400">
+  <p>• Please send a clear and detailed request.</p>
+  <p>• Let me know which features are most important — high, medium, or low priority.</p>
+  <p className="text-yellow-400">• I'm open to different job types, but hourly is preferred.</p>
+</div>
+
           </motion.div>
           
           <motion.div

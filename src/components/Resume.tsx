@@ -1,6 +1,4 @@
-
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Download, Briefcase, GraduationCap, Code, ArrowRight } from "lucide-react";
 
 const Resume = () => {
@@ -40,10 +38,14 @@ const Resume = () => {
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">CHIBUZOR PRINCE</h3>
                 <p className="text-blue-300">Developer</p>
               </div>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white text-sm w-full sm:w-auto">
+              <a
+                href="/Chibuzor%20Prince%20RESUME.pdf" // Path to the PDF file in the public folder
+                download="Chibuzor_Prince_Resume.pdf" // Optional: Specify the downloaded file name
+                className="bg-blue-600 hover:bg-blue-700 text-white text-sm w-full sm:w-auto flex items-center justify-center px-4 py-2 rounded"
+              >
                 <Download className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 Download CV
-              </Button>
+              </a>
             </div>
 
             <div className="border-t border-white/10 pt-6 mt-6">
@@ -59,7 +61,7 @@ const Resume = () => {
                 <div className="mb-4">
                   <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-blue-800 rounded-full -left-1.5 sm:-left-2 mt-1"></div>
                   <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-8">
-                    <span className="text-blue-300 font-semibold text-sm sm:text-base">2023-2025</span>
+                    <span className="text-blue-300 font-semibold text-sm sm:text-base">2023-2024</span>
                     <div>
                       <h4 className="font-bold text-sm sm:text-base">Advanced Diploma in Software Engineering</h4>
                       <p className="text-blue-300 text-xs sm:text-sm">Aptech Computer Education, Lagos, NG</p>
